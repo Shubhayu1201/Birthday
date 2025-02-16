@@ -59,19 +59,7 @@ function toggleLights() {
 }
 
 function playMusic() {
-    const music = document.getElementById("romantic-music");
-    music.volume = 0; // Start from silence
-    music.play();
-
-    let volume = 0;
-    const fadeInterval = setInterval(() => {
-        if (volume < 1) {
-            volume += 0.05; // Increase volume gradually
-            music.volume = volume;
-        } else {
-            clearInterval(fadeInterval); // Stop increasing volume once maxed out
-        }
-    }, 200); // Adjust timing for smoother fade
+    document.getElementById("romantic-music").play();
     document.getElementById("music-box").style.display = "none";
     document.getElementById("image-box").style.display = "block";
 }
